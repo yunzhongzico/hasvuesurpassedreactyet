@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "yarn build && node deploy.js"
   },
   "dependencies": {
     "vue": "^2.5.13"
@@ -15,6 +16,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
     "@vue/cli-service": "^3.0.0-beta.6",
     "@vue/eslint-config-standard": "^3.0.0-beta.6",
+    "gh-pages": "^1.1.0",
     "vue-template-compiler": "^2.5.13"
   },
   "browserslist": [
