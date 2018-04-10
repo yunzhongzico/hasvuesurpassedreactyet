@@ -1,7 +1,18 @@
 <template>
   <div id="app">
-    <h1 v-if="vue > react">🎉 YES 🎉</h1>
-    <h1 v-else>soon</h1>
+    <main v-if="vue && react">
+      <div v-if="vue > react">
+        <span class="emoji">🎉</span>
+        <h1>yaaaass!</h1>
+        <a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">+{{vue-react}} ⭐️</a>
+      </div>
+      <div v-else>
+        <span class="emoji">✊</span>
+        <h1>soon</h1>
+        <h2></h2>
+        <a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">-{{react-vue}} ⭐️</a>
+      </div>
+    </main>
   </div>
 </template>
 
@@ -30,15 +41,37 @@ export default {
     margin: 0;
   }
   #app {
+    background: #42b983;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+  }
+  h1, a {
+    font-weight: bolder;
+    line-height: 1em;
   }
   h1 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bolder;
+    margin: -0.2em auto 0.2em auto;
     font-size: 20vw;
   }
+  a, a:hover, a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 4vw;
+  }
+  .emoji {
+    font-size: 128px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .emoji {
+      font-size: 12vw;
+    }
+  }
+
 </style>
