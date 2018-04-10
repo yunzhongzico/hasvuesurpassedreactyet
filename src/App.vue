@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1 v-if="vue > react">🎉 YES 🎉</h1>
-    <h1 v-else>Soon...</h1>
+    <h1 v-else>soon</h1>
   </div>
 </template>
 
@@ -24,3 +24,21 @@ export default {
   }
 }
 </script>
+
+<style>
+  body {
+    margin: 0;
+  }
+  #app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    font-size: 20vw;
+  }
+</style>
