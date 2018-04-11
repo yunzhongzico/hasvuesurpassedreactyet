@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Ribbon />
     <main v-if="vue && react">
       <div v-if="vue > react">
         <span class="emoji">🎉</span>
@@ -17,8 +18,13 @@
 </template>
 
 <script>
+import Ribbon from '@/components/Ribbon'
+
 export default {
   name: 'app',
+  components: {
+    Ribbon
+  },
   data () {
     return {
       react: 0,
