@@ -12,6 +12,8 @@
         <h1>soon</h1>
         <h2></h2>
         <a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">-{{react-vue}} ⭐️</a>
+        <br><br><br>
+        <img class="itshappening" src="https://media.giphy.com/media/sa5Hd8qIVK6Eo/giphy.gif">
       </div>
     </main>
   </div>
@@ -72,6 +74,12 @@ export default {
   }
   .emoji {
     font-size: 128px;
+  }
+
+  .itshappening {
+    width: 90vw;
+    height: auto;
+    max-width: 500px;
   }
 
   @media screen and (max-width: 1024px) {
