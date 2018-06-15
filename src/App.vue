@@ -2,10 +2,12 @@
   <div id="app">
     <Ribbon />
     <main v-if="vue && react">
-      <div v-if="vue > react">
+      <div v-if="vue >= react">
         <span class="emoji">🎉</span>
         <h1>yaaaass!</h1>
-        <a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">+{{vue-react}} ⭐️</a>
+        <a v-if="vue - react > 0" href="https://github.com/vuejs/vue" target="_blank" rel="noopener">+{{vue-react}} ⭐️</a>
+        <br><br><br>
+        <img class="unnecessary-excitement" src="https://media.giphy.com/media/xT8qAY7e9If38xkrIY/giphy.gif">
       </div>
       <div v-else>
         <span class="emoji">✊</span>
@@ -13,7 +15,7 @@
         <h2></h2>
         <a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">-{{react-vue}} ⭐️</a>
         <br><br><br>
-        <img class="itshappening" src="https://media.giphy.com/media/sa5Hd8qIVK6Eo/giphy.gif">
+        <img class="unnecessary-excitement" src="https://media.giphy.com/media/sa5Hd8qIVK6Eo/giphy.gif">
       </div>
     </main>
   </div>
@@ -46,6 +48,9 @@ export default {
 
 <style>
   body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     margin: 0;
   }
   #app {
@@ -77,7 +82,7 @@ export default {
     font-size: 128px;
   }
 
-  .itshappening {
+  .unnecessary-excitement {
     width: 90vw;
     height: auto;
     max-width: 500px;
